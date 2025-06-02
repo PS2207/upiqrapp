@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UPIPaymentQRCodeApp</string>
+    <string name="private_version">5a064ca02462186b51b54a2402d513daeb0c1fca</string>
+    <string name="presplash_color">#000000</string>
+    <string name="urlScheme">kivy</string>
+</resources>
