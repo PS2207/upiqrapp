@@ -13,7 +13,7 @@ class QRCodeApp(App):
         # Your hardcoded UPI details
         upi_id = "pragyasinha959@oksbi"
         name = "Pragya"
-        amount = "100"
+        amount = "101"
         message = "Thanks"
 
         # Generate UPI QR code
@@ -28,7 +28,7 @@ class QRCodeApp(App):
         qr_image = Image(texture=core_image.texture)
 
         layout.add_widget(qr_image)
-        layout.add_widget(Label(text="Scan this QR to pay ₹100", font_size='20sp'))
+        layout.add_widget(Label(text=f"Scan this QR to pay {amount}", font_size='20sp'))
 
         return layout
 
