@@ -10,7 +10,7 @@ class QRCodeApp(App):
     def build(self):
         layout = BoxLayout(orientation='vertical', padding=20, spacing=20)
 
-        # Your hardcoded UPI details
+        # Hardcoded UPI details
         upi_id = "pragyasinha959@oksbi"
         name = "Pragya"
         amount = "101"
