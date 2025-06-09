@@ -9,3 +9,13 @@ bin buildozer.spec kivy_env kivyenv pyjnius venv
  System-level tools- Pyhton3, pip3, git can stay global.
  Project-specific tools- kivy, buildozer,pyjnius etc. should be installed in virtual environment.
  Always activate venv before installing or running app.
+
+ How to Run a Windows Kivy App on Ubuntu(WSL) Terminal-
+ 1.Open Ubuntu(Windows Subsystem for Linux) Terminal
+ 2.Navigate to your Kivy Project directory- 
+ rsync -av --progress --exclude .buildozer --exclude bin /mnt/c/Users/psinh/Desktop/upiqrapp/ ~/upiqrapp
+
+ lets say app(upiqrapp) is on desktop path(C:\users\psinh\desktop\upiqrapp)- so change path using this- 'cd /mnt/c/users/psinh/desktop/upiqrapp'
+ now run this using this command- 'python main.py'
+ 3.Activate your virtual environment(if you have one) or else create using (python3 -m venv venv_name), then activate using (source venv/bin/activate)&                 for deactiving venv use - (deactivate).
+ 4.Run your Kivy app
