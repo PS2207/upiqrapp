@@ -21,4 +21,4 @@ bin buildozer.spec kivy_env kivyenv pyjnius venv
  create using (python3 -m venv venv_name) then,
  activate using (source venv/bin/activate)&   for deactiving venv use - (deactivate).
  4.Run your Kivy app using - (python main.py)
- 5.Build your kivy app  using Buildozer to create 'apk file' for Android
+ 5.Build your kivy app  using Buildozer to create 'apk file' for Android - run this (buildozer -v android debug)
