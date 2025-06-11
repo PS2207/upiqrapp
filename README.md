@@ -1,7 +1,6 @@
 To develop/build Android apps using Python - We typically use Kivy(for GUI) & Buildozer(for packaging to android),
 However Buildozer is designed for Linux so we need to use WSL(windows-subsytsem for linux) - linux terminal inside windows.
-folders:
-bin buildozer.spec kivy_env kivyenv pyjnius venv
+folders: bin, buildozer.spec, kivy_env kivyenv ,pyjnius venv
 *buildozer.spec: This is the configuration file used by Buildozer to package Kivy apps for Android. 
                 It contains settings like- app name, version, requirements, permissions etc.
 *venv- These are likely virtual environments created to isolate python packages for kivy projects. 
