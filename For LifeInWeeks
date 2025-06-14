@@ -1,0 +1,7 @@
+1).Add error handling for cases like:-
+User not found
+Event not found
+Access denied
+Validation errors
+
+2)Make the APIs clean and secure
