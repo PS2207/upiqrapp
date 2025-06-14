@@ -1,3 +1,13 @@
+// === PACKAGE STRUCTURE ===
+// com.lifeinweeks.backend
+// ├── controller
+// ├── dto
+// ├── entity
+// ├── exception
+// ├── repository
+// ├── security
+// ├── service
+// └── LifeInWeeksBackendApplication.java
 1).Add error handling for cases like:-
 User not found
 Event not found
