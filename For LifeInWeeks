@@ -8,6 +8,7 @@
 // ├── security
 // ├── service
 // └── LifeInWeeksBackendApplication.java
+
 1).Add error handling for cases like:-
 User not found
 Event not found
@@ -15,3 +16,55 @@ Access denied
 Validation errors
 
 2)Make the APIs clean and secure
+{
+  "username": "testuser",
+  "password": "test123",
+  "email": "test@example.com",
+  "birthDate": "2000-01-01"
+}
+{
+  "username": "testuser",
+  "password": "test123"
+}
+_________________________________________
+🔹 Create Event
+POST http://localhost:8080/api/events
+Body (JSON):
+
+json
+Copy
+Edit
+{
+  "title": "My Milestone",
+  "category": "Personal",
+  "description": "Graduated!",
+  "date": "2020-06-01"
+}
+🔹 Get All Events
+GET http://localhost:8080/api/events
+(Use same Basic Auth)
+
+🔹 Update Event
+PUT http://localhost:8080/api/events/{id}
+(Replace {id} with actual event ID)
+
+🔹 Delete Event
+DELETE http://localhost:8080/api/events/{id}
+_______________________________________________
+🔒 Notes on Security:
+Since you're using httpBasic() in SecurityConfig, every request must include Basic Auth credentials.
+
+Later, you can switch to JWT for token-based authentication if preferred.
+
+❓Want JWT instead of Basic Auth?
+JWT is better for modern APIs (especially for Angular frontend). Let me know, and I’ll integrate JWT next.
+
+
+
+
+
+
+
+
+
+(Use same Basic Auth)
