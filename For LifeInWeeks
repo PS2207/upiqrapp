@@ -18,8 +18,8 @@ Step2- Type 'Spring Initialize' on a browser &
        Click generate then extract that downloaded zip & open in an IDE(Eclipse/VS code etc)
 
 Step3- Start developing app
-Step4- Create the following packages or any other packages depending on our requirements of project.
-Step5- Craete the following classes or depending our requirements.
+Step4- Create the following packages and classes, or any other packages & classes depending on our requirements of the project.
+Step5- Create the following classes or depending our requirements.
 // === PACKAGE STRUCTURE ===
 // com.lifeinweeks.backend
 // ├── controller
