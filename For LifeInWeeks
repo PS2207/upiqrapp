@@ -17,19 +17,33 @@ Step2- Type 'Spring Initialize' on a browser &
        Need to add Some dependencies like (Spring Web ,Spring Boot DevTools, Lombok, Spring Data JPA,  MySQL Driver, Validation, Spring Security)cre
        Click generate then extract that downloaded zip & open in an IDE(Eclipse/VS code etc)
 
-Step3- Start developing app
-Step4- Create the following packages and classes, or any other packages & classes depending on our requirements of the project.
-Step5- Create the following classes or depending our requirements.
-// === PACKAGE STRUCTURE ===
-// com.lifeinweeks.backend
-// ├── controller
-// ├── dto
-// ├── entity
-// ├── exception
-// ├── repository
-// ├── security
-// ├── service
-// └── LifeInWeeksBackendApplication.java
+Step3- Start developing app so, Create the following packages and classes, or any other packages & classes depending on requirements of the project.
+// === PACKAGE & CLASSES STRUCTURE ===
+
+com.lifeinweeks.backend
+├── controller
+│   └── AuthController.java
+│   └── EventController.java
+├── dto
+│   └── LoginRequestDto.java
+│   └── RegisterRequestDto.java
+│   └── EventDto.java
+├── entity
+│   └── User.java
+│   └── Event.java
+├── exception
+│   └── ResourceNotFoundException.java
+│   └── ValidationException.java
+├── repository
+│   └── UserRepository.java
+│   └── EventRepository.java
+├── service
+│   └── UserService.java
+│   └── EventService.java
+│   └── impl
+│       └── UserServiceImpl.java
+│       └── EventServiceImpl.java
+└── LifeInWeeksBackendApplication.java
 __________________________________________________________________
 Validate Security Flow-
 -------------------------------------------------------------
@@ -50,9 +64,12 @@ Access denied
 Validation errors
 
 ###################################################################################
-APIs For Sending request to Server using Postman JSON data-
-Send User data in json form like this using these apis- 
-(i) Api- POST http://localhost:8081/api/user
+APIs For Sending request to Server using POSTMAN JSON data :-
+------------------------------------------------------------------------------
+Send User data in json form like the follwing using these apis- 
+------------------------------------------------------------------------------
+For User Registration:-
+(i) Api - POST http://localhost:8081/api/user/register
 (ii)Json data
 {
   "username": "testuser",
@@ -60,13 +77,17 @@ Send User data in json form like this using these apis-
   "email": "test@example.com",
   "birthDate": "2000-01-01"
 }
+-------------------------------------------------------------------
+For User Login :-
+(i) Api -  POST http://localhost:8081/api/user/login
+(ii)Json data
 {
   "username": "testuser",
   "password": "test123"
 }
-_________________________________________
+_________________________________________________________________________
 🔹 Create Event :
-POST http://localhost:8081/api/events
+POST http://localhost:8081/api/event/user/{userId}/create
 Body (JSON):
 Edit
 {
@@ -76,15 +97,14 @@ Edit
   "date": "2020-06-01"
 }
 🔹 Get All Events:
-GET http://localhost:8081/api/events
+GET http://localhost:8081/api/events/user/{userId}/getAll
 (Use same Basic Auth)
 
 🔹 Update Event:
 PUT http://localhost:8081/api/events/{id}
-(Replace {id} with actual event ID)
 
 🔹 Delete Event:
-DELETE http://localhost:8081/api/events/{id}
+DELETE http://localhost:8081/api/events/user/{userId}/{eventId}/delete
 ___________________________________________________________________________________________________
 🔒 Notes on Security:
 Since using httpBasic() in SecurityConfig, every request must include Basic Auth credentials.
