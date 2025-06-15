@@ -4,7 +4,7 @@ Step1- The following must be installed in our system-
 (i) JAVA (Programming language)
 (ii)Springboot maven project (Java framework for fast development)
 (ii)MySQL (Database to store data)
-(iii)POSTMAN (for sending request to server or send data to server in the form of JSON, since not created GUI using REACT/ANGULAR for sending request to server)
+(iii)POSTMAN (for sending request to server or send data to server in the form of JSON, since not created GUI using REACT/ANGULAR for sending request to server). we can also use Swagger to send request to server.
 (iv)Git (to upload projects on our github account)
 
 Extra details that i have not added -
@@ -44,6 +44,46 @@ com.lifeinweeks.backend
 │       └── UserServiceImpl.java
 │       └── EventServiceImpl.java
 └── LifeInWeeksBackendApplication.java
+___________________________________________________________________
+In this project things are managed:
+✅ 1. User Management 
+✅ 2. Event Management 
+✅ 3. Backend & DB Configuration
+✅ 4. DTOs (Data Transfer Objects) 
+✅ Validation 
+✅ Error Handling
+
+✔ User Registration
+POST /api/user/register
+Accepts: username, email, password, birthDate
+Validates input using @Valid
+Saves user to database
+
+✔ User Login
+POST /api/user/login
+Accepts: username and password
+
+✅ 3. Backend & DB Configuration
+Configured MySQL database with Hibernate JPA
+JDBC connection using application.properties
+Table auto-creation using spring.jpa.hibernate.ddl-auto=update
+Show SQL logs using spring.jpa.show-sql=true
+
+✅ 4. DTOs (Data Transfer Objects)
+RegisterRequestDto, LoginRequestDto, UserResponseDto for clean API input/output
+EventDto for event input/output
+
+✅ Validation
+Using @Valid, @NotBlank, @Email, etc. in DTOs
+Error messages shown if fields are missing or invalid
+
+✅ Error Handling
+Custom ResourceNotFoundException thrown if:
+User not found
+Event not found
+Invalid login credentials
+____________________________________________________________________
+
 __________________________________________________________________
 Validate Security Flow-
 -------------------------------------------------------------
@@ -130,50 +170,6 @@ Later, we can also switch to JWT for token-based authentication if preferred.
 Note: JWT is better for modern APIs (especially for Angular frontend). 
 
 
-
-
-  {
-    "title": "Born",
-    "category": "Life",
-    "description": "The day I was born",
-    "date": "2000-01-01"
-  },
-  {
-    "title": "First Day of School",
-    "category": "Education",
-    "description": "Started kindergarten at Little Steps School",
-    "date": "2005-06-15"
-  },
-  {
-    "title": "Graduation",
-    "category": "Milestone",
-    "description": "Graduated from high school",
-    "date": "2018-04-20"
-  },
-  {
-    "title": "Joined University",
-    "category": "Education",
-    "description": "Started computer science degree",
-    "date": "2018-08-10"
-  },
-  {
-    "title": "First Job",
-    "category": "Career",
-    "description": "Joined ABC Pvt Ltd as a software intern",
-    "date": "2022-07-01"
-  },
-  {
-    "title": "Moved to Delhi",
-    "category": "Life",
-    "description": "Shifted for job opportunities",
-    "date": "2023-01-15"
-  },
-  {
-    "title": "Started Hackathon Project",
-    "category": "Project",
-    "description": "Began developing 'Life in Weeks' app",
-    "date": "2025-06-10"
-  }
 
 
 
