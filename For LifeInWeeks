@@ -87,29 +87,107 @@ For User Login :-
 }
 _________________________________________________________________________
 🔹 Create Event :
-POST http://localhost:8081/api/event/user/{userId}/create
+POST http://localhost:8081/api/event/user/userId/create
 Body (JSON):
-Edit
+--------------------------------------------------
+1
+  {
+    "title": "Joined University",
+    "category": "Education",
+    "description": "Started computer science degree",
+    "date": "2018-08-10"
+  }
+-------------------------------
+2
 {
   "title": "My Milestone",
   "category": "Personal",
   "description": "Graduated!",
-  "date": "2020-06-01"
+  "date": "2022-06-01"
 }
+-------------------------------
+3.
+  {
+    "title": "Started Hackathon Project",
+    "category": "Project",
+    "description": "Began developing 'Life in Weeks' app",
+    "date": "2025-06-10"
+  }
+--------------------------------------------------------------------
 🔹 Get All Events:
-GET http://localhost:8081/api/events/user/{userId}/getAll
+GET http://localhost:8081/api/event/user/userId/getAll
 (Use same Basic Auth)
 
 🔹 Update Event:
-PUT http://localhost:8081/api/events/{id}
+PUT http://localhost:8081/api/event/eventId
 
 🔹 Delete Event:
-DELETE http://localhost:8081/api/events/user/{userId}/{eventId}/delete
+DELETE http://localhost:8081/api/event/user/1/2/delete
 ___________________________________________________________________________________________________
 🔒 Notes on Security:
 Since using httpBasic() in SecurityConfig, every request must include Basic Auth credentials.
 Later, we can also switch to JWT for token-based authentication if preferred.
 Note: JWT is better for modern APIs (especially for Angular frontend). 
+
+
+
+
+  {
+    "title": "Born",
+    "category": "Life",
+    "description": "The day I was born",
+    "date": "2000-01-01"
+  },
+  {
+    "title": "First Day of School",
+    "category": "Education",
+    "description": "Started kindergarten at Little Steps School",
+    "date": "2005-06-15"
+  },
+  {
+    "title": "Graduation",
+    "category": "Milestone",
+    "description": "Graduated from high school",
+    "date": "2018-04-20"
+  },
+  {
+    "title": "Joined University",
+    "category": "Education",
+    "description": "Started computer science degree",
+    "date": "2018-08-10"
+  },
+  {
+    "title": "First Job",
+    "category": "Career",
+    "description": "Joined ABC Pvt Ltd as a software intern",
+    "date": "2022-07-01"
+  },
+  {
+    "title": "Moved to Delhi",
+    "category": "Life",
+    "description": "Shifted for job opportunities",
+    "date": "2023-01-15"
+  },
+  {
+    "title": "Started Hackathon Project",
+    "category": "Project",
+    "description": "Began developing 'Life in Weeks' app",
+    "date": "2025-06-10"
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
