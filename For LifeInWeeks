@@ -1,3 +1,25 @@
+Project details :
+
+Step1- The following must be installed in our system- 
+(i) JAVA (Programming language)
+(ii)Springboot maven project (Java framework for fast development)
+(ii)MySQL (Database to store data)
+(iii)POSTMAN (for sending request to server or send data to server in the form of JSON, since not created GUI using REACT/ANGULAR for sending request to server)
+(iv)Git (to upload projects on our github account)
+
+Extra details that i have not added -
+For Frontend(GUI)-
+(v)React/Angular
+
+
+Step2- Type 'Spring Initialize' on a browser &
+       Start Creating Spring Initializer Project structure by giving Name,ArtifactId, group name,package name & choose java , java version, springboot .
+       Need to add Some dependencies like (Spring Web ,Spring Boot DevTools, Lombok, Spring Data JPA,  MySQL Driver, Validation, Spring Security)cre
+       Click generate then extract that downloaded zip & open in an IDE(Eclipse/VS code etc)
+
+Step3- Start developing app
+Step4- Create the following packages or any other packages depending on our requirements of project.
+Step5- Craete the following classes or depending our requirements.
 // === PACKAGE STRUCTURE ===
 // com.lifeinweeks.backend
 // ├── controller
