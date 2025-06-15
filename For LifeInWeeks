@@ -30,26 +30,30 @@ Step5- Create the following classes or depending our requirements.
 // ├── security
 // ├── service
 // └── LifeInWeeksBackendApplication.java
-____________________________________________________________
+__________________________________________________________________
 Validate Security Flow-
------------------------------------------------------------
+-------------------------------------------------------------
 Action	        Endpoint	Auth Required?	Auth Type
------------------------------------------------------------
-Register User   POST /api/auth/register	  ❌ No	None
+--------------------------------------------------------------
+Register User   POST /api/auth/register	    ❌ No	None
 Login (test)	  POST /api/auth/login	    ❌ No	None
 -------------------------------------------------------------
 Create Event	  POST /api/events	        ✅ Yes	Basic Auth
-View All Events	GET  /api/events	        ✅ Yes	Basic Auth
-Update Event	  PUT  /api/events/{id}	    ✅ Yes	Basic Auth
-Delete Event	  DELETE /api/events/{id}	  ✅ Yes	Basic Auth
-_____________________________________________________________
+View All Events GET  /api/events	        ✅ Yes	Basic Auth
+Update Event	  PUT  /api/events/{id}	 ✅ Yes	Basic Auth
+Delete Event	  DELETE /api/events/{id}	 ✅ Yes	Basic Auth
+_____________________________________________________________________
 1).Add error handling for cases like:-
 User not found
 Event not found
 Access denied
 Validation errors
 
-2)Make the APIs clean and secure
+###################################################################################
+APIs For Sending request to Server using Postman JSON data-
+Send User data in json form like this using these apis- 
+(i) Api- POST http://localhost:8081/api/user
+(ii)Json data
 {
   "username": "testuser",
   "password": "test123",
@@ -61,12 +65,9 @@ Validation errors
   "password": "test123"
 }
 _________________________________________
-🔹 Create Event
-POST http://localhost:8080/api/events
+🔹 Create Event :
+POST http://localhost:8081/api/events
 Body (JSON):
-
-json
-Copy
 Edit
 {
   "title": "My Milestone",
@@ -74,24 +75,21 @@ Edit
   "description": "Graduated!",
   "date": "2020-06-01"
 }
-🔹 Get All Events
-GET http://localhost:8080/api/events
+🔹 Get All Events:
+GET http://localhost:8081/api/events
 (Use same Basic Auth)
 
-🔹 Update Event
-PUT http://localhost:8080/api/events/{id}
+🔹 Update Event:
+PUT http://localhost:8081/api/events/{id}
 (Replace {id} with actual event ID)
 
-🔹 Delete Event
-DELETE http://localhost:8080/api/events/{id}
-_______________________________________________
+🔹 Delete Event:
+DELETE http://localhost:8081/api/events/{id}
+___________________________________________________________________________________________________
 🔒 Notes on Security:
-Since you're using httpBasic() in SecurityConfig, every request must include Basic Auth credentials.
-
-Later, you can switch to JWT for token-based authentication if preferred.
-
-❓Want JWT instead of Basic Auth?
-JWT is better for modern APIs (especially for Angular frontend). Let me know, and I’ll integrate JWT next.
+Since using httpBasic() in SecurityConfig, every request must include Basic Auth credentials.
+Later, we can also switch to JWT for token-based authentication if preferred.
+Note: JWT is better for modern APIs (especially for Angular frontend). 
 
 
 
